@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--
+  regression.xml — Full suite for CI runs on every push to main.
+
+  Includes all test classes in dependency order:
+    1. Happy path — confirm valid payments work
+    2. Negative   — confirm invalid payments are rejected correctly
+    3. Schema     — confirm response structure is always consistent
+    4. System     — confirm infrastructure failure handling
+
+  Run: mvn test -Dsurefire.suiteXmlFiles=suites/regression.xml
+-->
+
+<suite name="pacs.008 Regression Suite" verbose="1" parallel="none">
+
+  <test name="Happy Path">
+    <classes>
+      <class name="com.payments.tests.Pacs008HappyPathTest"/>
+    </classes>
+  </test>
+
+  <test name="Negative Validation">
+    <classes>
+      <class name="com.payments.tests.Pacs008NegativeTest"/>
+    </classes>
+  </test>
+
+  <test name="Schema Validation">
+    <classes>
+      <class name="com.payments.tests.Pacs008SchemaValidationTest"/>
+    </classes>
+  </test>
+
+  <test name="System Failures">
+    <groups>
+      <run>
+        <include name="system"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.payments.tests.Pacs008SystemFailureTest"/>
+    </classes>
+  </test>
+
+</suite>

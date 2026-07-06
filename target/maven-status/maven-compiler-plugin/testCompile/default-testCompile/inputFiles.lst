@@ -1,0 +1,6 @@
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\api\Pacs008Client.java
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\tests\BaseApiTest.java
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\tests\Pacs008HappyPathTest.java
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\tests\Pacs008NegativeTest.java
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\tests\Pacs008SystemFailureTest.java
+C:\Users\akpra\IdeaProjects\rest-assured-pacs008\src\test\java\com\payments\validation\Pacs008ResponseAssertions.java

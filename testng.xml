@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--
+  testng.xml — pacs.008 API Test Suite
+
+  Smoke   → fast subset: 1 happy path + 1 negative (pre-merge sanity)
+  Regression → full suite: all happy path, negative, schema tests
+-->
+
+<suite name="pacs.008 API Test Suite" verbose="1">
+
+  <test name="Smoke">
+    <classes>
+      <class name="com.payments.tests.Pacs008HappyPathTest">
+        <methods>
+          <include name="testValidUsdPaymentAccepted"/>
+        </methods>
+      </class>
+      <class name="com.payments.tests.Pacs008NegativeTest">
+        <methods>
+          <include name="testMissingMsgIdReturns400"/>
+          <include name="testInvalidDebtorBicReturns422"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+
+  <test name="Regression">
+    <classes>
+      <class name="com.payments.tests.Pacs008HappyPathTest"/>
+      <class name="com.payments.tests.Pacs008NegativeTest"/>
+      <class name="com.payments.tests.Pacs008SchemaValidationTest"/>
+    </classes>
+  </test>
+
+</suite>

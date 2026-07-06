@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--
+  smoke.xml — Fast sanity check before every merge.
+
+  Goal: run in under 30 seconds, catch the most obvious breaks.
+  Rule: one test per test class, covering the most critical path.
+
+  Run: mvn test -Dsurefire.suiteXmlFiles=suites/smoke.xml
+-->
+
+<suite name="pacs.008 Smoke Suite" verbose="1">
+  <test name="Smoke">
+    <classes>
+
+      <class name="com.payments.tests.Pacs008HappyPathTest">
+        <methods>
+          <!-- Core happy path — valid USD payment accepted -->
+          <include name="testValidUsdPaymentAccepted"/>
+        </methods>
+      </class>
+
+      <class name="com.payments.tests.Pacs008NegativeTest">
+        <methods>
+          <!-- Core negative — missing mandatory field rejected -->
+          <include name="testMissingMsgIdRejected"/>
+          <!-- Core negative — invalid BIC rejected -->
+          <include name="testInvalidDebtorBicRejected"/>
+        </methods>
+      </class>
+
+      <class name="com.payments.tests.Pacs008SchemaValidationTest">
+        <methods>
+          <!-- Core schema — response has all required fields -->
+          <include name="testAcceptedResponseHasRequiredFields"/>
+        </methods>
+      </class>
+
+    </classes>
+  </test>
+</suite>
