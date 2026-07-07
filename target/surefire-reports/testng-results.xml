@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="31" passed="31" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-07T09:05:10 IST" name="pacs.008 API Test Suite" finished-at="2026-07-07T09:05:14 IST" duration-ms="3850">
+    <groups>
+      <group name="system">
+        <method signature="Pacs008SystemFailureTest.testRepeatedSubmissionsAreStateless()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" name="testRepeatedSubmissionsAreStateless" class="com.payments.tests.Pacs008SystemFailureTest"/>
+        <method signature="Pacs008SystemFailureTest.testServerErrorResponseIsStructured()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" name="testServerErrorResponseIsStructured" class="com.payments.tests.Pacs008SystemFailureTest"/>
+        <method signature="Pacs008SystemFailureTest.testServerErrorReturns500()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" name="testServerErrorReturns500" class="com.payments.tests.Pacs008SystemFailureTest"/>
+      </group> <!-- system -->
+    </groups>
+    <test started-at="2026-07-07T09:05:10 IST" name="Smoke" finished-at="2026-07-07T09:05:12 IST" duration-ms="1975">
+      <class name="com.payments.tests.Pacs008HappyPathTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@1623b78d]" started-at="2026-07-07T09:05:10 IST" name="setUp" finished-at="2026-07-07T09:05:11 IST" duration-ms="714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidUsdPaymentAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@1623b78d]" started-at="2026-07-07T09:05:11 IST" name="testValidUsdPaymentAccepted" description="TC-HP-001: Valid pacs.008 USD payment should be accepted" finished-at="2026-07-07T09:05:12 IST" duration-ms="1008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidUsdPaymentAccepted -->
+      </class> <!-- com.payments.tests.Pacs008HappyPathTest -->
+      <class name="com.payments.tests.Pacs008NegativeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@49139829]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMissingMsgIdRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@49139829]" started-at="2026-07-07T09:05:12 IST" name="testMissingMsgIdRejected" description="TC-NEG-001: Missing MsgId should be rejected with 400" finished-at="2026-07-07T09:05:12 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMissingMsgIdRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@49139829]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidDebtorBicRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@49139829]" started-at="2026-07-07T09:05:12 IST" name="testInvalidDebtorBicRejected" description="TC-NEG-002: Invalid debtor BIC (9 chars) should be rejected with 422" finished-at="2026-07-07T09:05:12 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidDebtorBicRejected -->
+      </class> <!-- com.payments.tests.Pacs008NegativeTest -->
+    </test> <!-- Smoke -->
+    <test started-at="2026-07-07T09:05:12 IST" name="Regression" finished-at="2026-07-07T09:05:14 IST" duration-ms="1850">
+      <class name="com.payments.tests.Pacs008SystemFailureTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRepeatedSubmissionsAreStateless()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:13 IST" name="testRepeatedSubmissionsAreStateless" description="TC-SYS-003: Repeated submissions should all return 202 independently" finished-at="2026-07-07T09:05:14 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRepeatedSubmissionsAreStateless -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:14 IST" name="setUp" finished-at="2026-07-07T09:05:14 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testServerErrorResponseIsStructured()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:14 IST" name="testServerErrorResponseIsStructured" description="TC-SYS-002: 500 response should have status:ERROR and a message" finished-at="2026-07-07T09:05:14 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testServerErrorResponseIsStructured -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:14 IST" name="setUp" finished-at="2026-07-07T09:05:14 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testServerErrorReturns500()[pri:0, instance:com.payments.tests.Pacs008SystemFailureTest@33d512c1]" started-at="2026-07-07T09:05:14 IST" name="testServerErrorReturns500" description="TC-SYS-001: API should return 500 on server error" finished-at="2026-07-07T09:05:14 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testServerErrorReturns500 -->
+      </class> <!-- com.payments.tests.Pacs008SystemFailureTest -->
+      <class name="com.payments.tests.Pacs008HappyPathTest">
+        <test-method is-config="true" signature="startWireMock()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:09 IST" name="startWireMock" finished-at="2026-07-07T09:05:10 IST" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWireMock -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGbpRemittanceAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testGbpRemittanceAccepted" description="TC-HP-009: GBP remittance via Indian bank should be accepted" finished-at="2026-07-07T09:05:12 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGbpRemittanceAccepted -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLargeAmountAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testLargeAmountAccepted" description="TC-HP-005: Large payment amount should be accepted" finished-at="2026-07-07T09:05:12 IST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLargeAmountAccepted -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMinimumAmountAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testMinimumAmountAccepted" description="TC-HP-006: Minimum payment amount (0.01) should be accepted" finished-at="2026-07-07T09:05:12 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimumAmountAccepted -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResponseContainsSettlementDate()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testResponseContainsSettlementDate" description="TC-HP-004: Accepted response should include valid settlement date" finished-at="2026-07-07T09:05:12 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResponseContainsSettlementDate -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResponseContainsValidUetr()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testResponseContainsValidUetr" description="TC-HP-003: Accepted response should contain a valid UETR (gpi)" finished-at="2026-07-07T09:05:12 IST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResponseContainsValidUetr -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResponseTimeWithinSla()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testResponseTimeWithinSla" description="TC-HP-007: API response time should be within 3-second SLA" finished-at="2026-07-07T09:05:12 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResponseTimeWithinSla -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testStatusFieldIsValidEnum()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testStatusFieldIsValidEnum" description="TC-HP-008: Response status should be a valid payment status enum" finished-at="2026-07-07T09:05:12 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStatusFieldIsValidEnum -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidEurPaymentAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testValidEurPaymentAccepted" description="TC-HP-002: Valid pacs.008 EUR payment should be accepted" finished-at="2026-07-07T09:05:12 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidEurPaymentAccepted -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="setUp" finished-at="2026-07-07T09:05:12 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidUsdPaymentAccepted()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:12 IST" name="testValidUsdPaymentAccepted" description="TC-HP-001: Valid pacs.008 USD payment should be accepted" finished-at="2026-07-07T09:05:13 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidUsdPaymentAccepted -->
+        <test-method is-config="true" signature="stopWireMock()[pri:0, instance:com.payments.tests.Pacs008HappyPathTest@3590fc5b]" started-at="2026-07-07T09:05:14 IST" name="stopWireMock" finished-at="2026-07-07T09:05:14 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWireMock -->
+      </class> <!-- com.payments.tests.Pacs008HappyPathTest -->
+      <class name="com.payments.tests.Pacs008NegativeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAmountMismatchRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testAmountMismatchRejected" description="TC-NEG-007: Amount mismatch between GrpHdr and CdtTrfTxInf should be rejected" finished-at="2026-07-07T09:05:13 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAmountMismatchRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmptyBodyRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testEmptyBodyRejected" description="TC-NEG-009: Empty request body should be rejected with 400" finished-at="2026-07-07T09:05:13 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyBodyRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidBicFormatsRejected(java.lang.String,java.lang.String)[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidBicFormatsRejected" description="TC-NEG-012: Various invalid BIC formats should all be rejected" data-provider="invalidBicFormats" finished-at="2026-07-07T09:05:13 IST" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEUT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4 chars — too short]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidBicFormatsRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidBicFormatsRejected(java.lang.String,java.lang.String)[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidBicFormatsRejected" description="TC-NEG-012: Various invalid BIC formats should all be rejected" data-provider="invalidBicFormats" finished-at="2026-07-07T09:05:13 IST" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEUTDEDBB]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9 chars — invalid length]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidBicFormatsRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidBicFormatsRejected(java.lang.String,java.lang.String)[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidBicFormatsRejected" description="TC-NEG-012: Various invalid BIC formats should all be rejected" data-provider="invalidBicFormats" finished-at="2026-07-07T09:05:13 IST" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEUTDEDBBERR]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12 chars — too long]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidBicFormatsRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidBicFormatsRejected(java.lang.String,java.lang.String)[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidBicFormatsRejected" description="TC-NEG-012: Various invalid BIC formats should all be rejected" data-provider="invalidBicFormats" finished-at="2026-07-07T09:05:13 IST" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[All numeric — no bank letters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidBicFormatsRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidBicFormatsRejected(java.lang.String,java.lang.String)[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidBicFormatsRejected" description="TC-NEG-012: Various invalid BIC formats should all be rejected" data-provider="invalidBicFormats" finished-at="2026-07-07T09:05:13 IST" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DEUT DE DB]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Contains spaces]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidBicFormatsRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidCurrencyRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidCurrencyRejected" description="TC-NEG-006: Invalid currency code XXX should be rejected" finished-at="2026-07-07T09:05:13 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidCurrencyRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidDebtorBicRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidDebtorBicRejected" description="TC-NEG-002: Invalid debtor BIC (9 chars) should be rejected with 422" finished-at="2026-07-07T09:05:13 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidDebtorBicRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidDebtorIbanRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testInvalidDebtorIbanRejected" description="TC-NEG-003: Invalid IBAN checksum should be rejected" finished-at="2026-07-07T09:05:13 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidDebtorIbanRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMalformedXmlRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testMalformedXmlRejected" description="TC-NEG-008: Malformed XML should be rejected with 400" finished-at="2026-07-07T09:05:13 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMalformedXmlRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMissingMsgIdRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testMissingMsgIdRejected" description="TC-NEG-001: Missing MsgId should be rejected with 400" finished-at="2026-07-07T09:05:13 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMissingMsgIdRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMissingUetrRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testMissingUetrRejected" description="TC-NEG-010: Missing UETR should be rejected (CBPR+ mandatory)" finished-at="2026-07-07T09:05:13 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMissingUetrRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNegativeAmountRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testNegativeAmountRejected" description="TC-NEG-005: Negative amount should be rejected with 422" finished-at="2026-07-07T09:05:13 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNegativeAmountRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testWrongContentTypeRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testWrongContentTypeRejected" description="TC-NEG-011: Non-XML Content-Type should be rejected with 415" finished-at="2026-07-07T09:05:13 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWrongContentTypeRejected -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="setUp" finished-at="2026-07-07T09:05:13 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testZeroAmountRejected()[pri:0, instance:com.payments.tests.Pacs008NegativeTest@397fbdb]" started-at="2026-07-07T09:05:13 IST" name="testZeroAmountRejected" description="TC-NEG-004: Zero amount should be rejected with 422" finished-at="2026-07-07T09:05:13 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroAmountRejected -->
+      </class> <!-- com.payments.tests.Pacs008NegativeTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- pacs.008 API Test Suite -->
+</testng-results>

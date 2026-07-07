@@ -13,6 +13,7 @@
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <rest-assured.version>5.4.0</rest-assured.version>
     <testng.version>7.10.2</testng.version>
     <wiremock.version>3.5.2</wiremock.version>

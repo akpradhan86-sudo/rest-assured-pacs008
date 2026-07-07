@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>TestNG:  Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>28/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 07 09:05:12 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1850 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidBicFormatsRejected()'><b>testInvalidBicFormatsRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-012: Various invalid BIC formats should all be rejected<br>Parameters: 12345678, All numeric — no bank letters</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testNegativeAmountRejected()'><b>testNegativeAmountRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-005: Negative amount should be rejected with 422</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidBicFormatsRejected()'><b>testInvalidBicFormatsRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-012: Various invalid BIC formats should all be rejected<br>Parameters: DEUTDEDBBERR, 12 chars — too long</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008SystemFailureTest.testRepeatedSubmissionsAreStateless()'><b>testRepeatedSubmissionsAreStateless</b><br>Test class: com.payments.tests.Pacs008SystemFailureTest<br>Test method: TC-SYS-003: Repeated submissions should all return 202 independently</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008SystemFailureTest@33d512c1</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testZeroAmountRejected()'><b>testZeroAmountRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-004: Zero amount should be rejected with 422</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testGbpRemittanceAccepted()'><b>testGbpRemittanceAccepted</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-009: GBP remittance via Indian bank should be accepted</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidBicFormatsRejected()'><b>testInvalidBicFormatsRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-012: Various invalid BIC formats should all be rejected<br>Parameters: DEUTDEDBB, 9 chars — invalid length</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testMinimumAmountAccepted()'><b>testMinimumAmountAccepted</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-006: Minimum payment amount (0.01) should be accepted</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testMalformedXmlRejected()'><b>testMalformedXmlRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-008: Malformed XML should be rejected with 400</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testLargeAmountAccepted()'><b>testLargeAmountAccepted</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-005: Large payment amount should be accepted</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidDebtorIbanRejected()'><b>testInvalidDebtorIbanRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-003: Invalid IBAN checksum should be rejected</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidCurrencyRejected()'><b>testInvalidCurrencyRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-006: Invalid currency code XXX should be rejected</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008SystemFailureTest.testServerErrorResponseIsStructured()'><b>testServerErrorResponseIsStructured</b><br>Test class: com.payments.tests.Pacs008SystemFailureTest<br>Test method: TC-SYS-002: 500 response should have status:ERROR and a message</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008SystemFailureTest@33d512c1</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidDebtorBicRejected()'><b>testInvalidDebtorBicRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-002: Invalid debtor BIC (9 chars) should be rejected with 422</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testResponseContainsSettlementDate()'><b>testResponseContainsSettlementDate</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-004: Accepted response should include valid settlement date</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testValidUsdPaymentAccepted()'><b>testValidUsdPaymentAccepted</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-001: Valid pacs.008 USD payment should be accepted</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidBicFormatsRejected()'><b>testInvalidBicFormatsRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-012: Various invalid BIC formats should all be rejected<br>Parameters: DEUT, 4 chars — too short</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testInvalidBicFormatsRejected()'><b>testInvalidBicFormatsRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-012: Various invalid BIC formats should all be rejected<br>Parameters: DEUT DE DB, Contains spaces</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testResponseContainsValidUetr()'><b>testResponseContainsValidUetr</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-003: Accepted response should contain a valid UETR (gpi)</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008SystemFailureTest.testServerErrorReturns500()'><b>testServerErrorReturns500</b><br>Test class: com.payments.tests.Pacs008SystemFailureTest<br>Test method: TC-SYS-001: API should return 500 on server error</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008SystemFailureTest@33d512c1</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testEmptyBodyRejected()'><b>testEmptyBodyRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-009: Empty request body should be rejected with 400</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testMissingMsgIdRejected()'><b>testMissingMsgIdRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-001: Missing MsgId should be rejected with 400</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testWrongContentTypeRejected()'><b>testWrongContentTypeRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-011: Non-XML Content-Type should be rejected with 415</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testStatusFieldIsValidEnum()'><b>testStatusFieldIsValidEnum</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-008: Response status should be a valid payment status enum</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testMissingUetrRejected()'><b>testMissingUetrRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-010: Missing UETR should be rejected (CBPR+ mandatory)</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testValidEurPaymentAccepted()'><b>testValidEurPaymentAccepted</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-002: Valid pacs.008 EUR payment should be accepted</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008NegativeTest.testAmountMismatchRejected()'><b>testAmountMismatchRejected</b><br>Test class: com.payments.tests.Pacs008NegativeTest<br>Test method: TC-NEG-007: Amount mismatch between GrpHdr and CdtTrfTxInf should be rejected</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008NegativeTest@397fbdb</td></tr>
+<tr>
+<td title='com.payments.tests.Pacs008HappyPathTest.testResponseTimeWithinSla()'><b>testResponseTimeWithinSla</b><br>Test class: com.payments.tests.Pacs008HappyPathTest<br>Test method: TC-HP-007: API response time should be within 3-second SLA</td>
+<td></td>
+<td>0</td>
+<td>com.payments.tests.Pacs008HappyPathTest@3590fc5b</td></tr>
+</table><p>
+</body>
+</html>

@@ -201,11 +201,12 @@ public class Pacs008ResponseAssertions {
         Assert.assertFalse(value.isBlank(),
             "Field '" + jsonPath + "' should not be empty");
     }
-}
+
 
     // ── Utility ───────────────────────────────────────────────────────────
 
     /** Extract the HTTP status code — used when tests need to branch on status. */
     public int extractStatusCode(Response response) {
-        return response.getStatusCode();
+        return response.getStatusCode();     
+    }
 }

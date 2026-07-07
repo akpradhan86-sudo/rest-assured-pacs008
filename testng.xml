@@ -19,8 +19,8 @@
       </class>
       <class name="com.payments.tests.Pacs008NegativeTest">
         <methods>
-          <include name="testMissingMsgIdReturns400"/>
-          <include name="testInvalidDebtorBicReturns422"/>
+          <include name="testMissingMsgIdRejected"/>
+          <include name="testInvalidDebtorBicRejected"/>
         </methods>
       </class>
     </classes>
@@ -30,7 +30,7 @@
     <classes>
       <class name="com.payments.tests.Pacs008HappyPathTest"/>
       <class name="com.payments.tests.Pacs008NegativeTest"/>
-      <class name="com.payments.tests.Pacs008SchemaValidationTest"/>
+      <class name="com.payments.tests.Pacs008SystemFailureTest"/>
     </classes>
   </test>
 
